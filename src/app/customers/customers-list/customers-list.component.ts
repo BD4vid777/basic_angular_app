@@ -18,4 +18,12 @@ export class CustomersListComponent implements OnInit {
 
   }
 
+  calculateOrders() {
+    this.customersOrderTotal = 0;
+    this.filteredCustomers.forEach((customer: ICustomer) => {
+      // @ts-ignore
+      this.customersOrderTotal += customer.orderTotal;
+    });
+  }
+
 }
