@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { CustomersComponent } from './customers.component';
 import { CustomersListComponent } from './customers-list/customers-list.component';
 import { AppFilterTextboxComponent } from "./customers-list/filter-textbox.component";
+import { SharedModule } from "../shared/shared.module";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -12,7 +14,9 @@ import { AppFilterTextboxComponent } from "./customers-list/filter-textbox.compo
     AppFilterTextboxComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule,
+    FormsModule
   ],
   providers: [],
   exports: [
